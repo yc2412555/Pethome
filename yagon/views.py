@@ -242,22 +242,22 @@ class NiceViewSet(ModelViewSet):
 
 
 
-def get_comment(request, comment_id):
-    if request.method == 'GET':
-        queryset = Comment.objects.filter(c_id=comment_id).order_by('-c_time')
-        comment_list = []
-        comment_serializer = {}
-        for comment in queryset:
-            user = comment.user
-            u_name = user.u_name
-            c_content = comment.c_content
-            c_counts = comment.c_counts
-            comment_serializer['u_name'] = u_name
-            comment_serializer['c_content'] = c_content
-            comment_serializer['c_counts'] = c_counts
-            comment_list.append(comment_serializer)
-        data = {'code': 200, 'comments': comment_list}
-        return JsonResponse(data)
+# def get_comment(request, comment_id):
+#     if request.method == 'GET':
+#         queryset = Comment.objects.filter(c_id=comment_id).order_by('-c_time')
+#         comment_list = []
+#         comment_serializer = {}
+#         for comment in queryset:
+#             user = comment.user
+#             u_name = user.u_name
+#             c_content = comment.c_content
+#             c_counts = comment.c_counts
+#             comment_serializer['u_name'] = u_name
+#             comment_serializer['c_content'] = c_content
+#             comment_serializer['c_counts'] = c_counts
+#             comment_list.append(comment_serializer)
+#         data = {'code': 200, 'comments': comment_list}
+#         return JsonResponse(data)
 
 
 @api_view(['POST'])

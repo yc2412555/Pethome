@@ -16,13 +16,13 @@ Including another URLconf
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
-from yagon.views import DogVariesviewSet, CatVariesviewSet, DynamicsViewSet, get_comment, pub_dynamic, TagsViewSet, \
+from yagon.views import DogVariesviewSet, CatVariesviewSet, DynamicsViewSet, pub_dynamic, TagsViewSet, \
     CommentsViewSet, CollectionViewSet, NiceViewSet
 
 urlpatterns = [
     # path('mobile_code/<str:tel>/', send_code_by_sms),
     # path('token/', login_by_username),
-    path('comment/<int:comment_id>/', get_comment),
+    # path('comment/<int:comment_id>/', get_comment),
     path('dynamic/publishment/', pub_dynamic),
 ]
 
