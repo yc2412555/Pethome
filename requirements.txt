@@ -6,7 +6,7 @@ chardet==3.0.4
 Django==2.1.8
 django-filter==2.1.0
 django-redis==4.10.0
-djangorestframework==3.9.4
+djangorestframework==3.11.2
 idna==2.8
 kombu==4.6.3
 Pillow==6.0.0
